@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: CourierTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.454 s <<< FAILURE! - in CourierTest
+creatingCourierWithExistingLoginTest(CourierTest)  Time elapsed: 0.537 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "{\"message\": \"Этот логин уже используется\"}"
+  Actual: {"code":409,"message":"Этот логин уже используется. Попробуйте другой."}
+
+	at CourierTest.creatingCourierWithExistingLoginTest(CourierTest.java:124)
+
+creatingIdenticalCourierTest(CourierTest)  Time elapsed: 0.572 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "{\"message\": \"Этот логин уже используется\"}"
+  Actual: {"code":409,"message":"Этот логин уже используется. Попробуйте другой."}
+
+	at CourierTest.creatingIdenticalCourierTest(CourierTest.java:40)
+
